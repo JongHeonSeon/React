@@ -1,0 +1,47 @@
+.Header{
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left: 0;
+    width: 100%;
+    .Header_wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:20px;
+        background: #202020;
+        box-shadow: 1px 3px 6px #707070;
+        .Header__logo{
+            font-size: 50px;
+            color: #f1f1f1;
+        }
+        .Header__submit{
+            display: flex;
+            .Header__input_wrap{
+                height: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .Header__input_box{
+                    width: 120px;
+                    padding: 4px 10px;
+                    border:none;
+                    border-radius: 6px;
+                    box-sizing: border-box;
+                }
+            }
+            .Header__button_wrap{
+                margin-left: 4px;
+                position: relative;
+                .Header__button{
+                    box-sizing: border-box;
+                    border: none;
+                    border-radius: 6px;
+                    width: 50px;
+                    height: 50px;
+                    background: #f1f1f1;
+                }
+            }
+        }
+    }
+}
