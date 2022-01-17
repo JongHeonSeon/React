@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/*eslint-disable*/
+import React, { useEffect, useState } from "react";
 import './Header.css';
 
 function Header() {
@@ -12,6 +13,7 @@ function Header() {
         };
     };
 
+
     return(
         <div className="Header">
             <div className="Header_wrap">
@@ -22,7 +24,8 @@ function Header() {
                         <input type="password" className="Header__input_box" placeholder="PW" onKeyUp={loginKey} />
                     </div>
                     <div className="Header__button_wrap">
-                        <button className="Header__button">login</button>
+                        <button className="Header__button" onClick={login}
+                        >login</button>
                     </div>
                 </div>
             </div>
