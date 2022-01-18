@@ -1,33 +1,37 @@
 /*eslint-disable*/
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import './Header.css';
 
 function Header() {
-    const login = () => {
-        alert('Hello');
-    };
+    const [title] = useState('REACT');
 
-    const loginKey = (event) => {
-        if (event.keyCode === 13){
-            login();
-        };
-    };
+    const [id, setId] = useState('');
+    const [pw, setPw] = useState('');
 
+    const onSubmit = (e) => {
+        e.preventDefault();
+        alert('Submit Complete');
+        console.log(id, pw);
+    }
 
     return(
         <div className="Header">
             <div className="Header_wrap">
-                <a href="#" className="Header__logo">React</a>
-                <div className="Header__submit" onSubmit={login}>
-                    <div className="Header__input_wrap">
-                        <input type="text" className="Header__input_box" placeholder="ID" onKeyUp={loginKey} />
-                        <input type="password" className="Header__input_box" placeholder="PW" onKeyUp={loginKey} />
+                <a href="#" className="Header__logo">{title}</a>
+                <form onSubmit={onSubmit}>
+                    <div className="Header__submit">
+                        <div className="Header__input_wrap">
+                            <input type="text" className="Header__input_box" placeholder="ID" value={id}
+                            onChange={(e) => setId(e.target.value)} />
+                            <input type="password" className="Header__input_box" placeholder="PW" value={pw}
+                            onChange={(e) => setPw(e.target.value)} />
+                        </div>
+                        <div className="Header__button_wrap">
+                            <button className="Header__button" type="submit"
+                            >login</button>
+                        </div>
                     </div>
-                    <div className="Header__button_wrap">
-                        <button className="Header__button" onClick={login}
-                        >login</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     );
