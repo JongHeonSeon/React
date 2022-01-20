@@ -4,25 +4,25 @@
     top:0;
     left: 0;
     width: 100%;
-    #{&}_wrap{
+    &_wrap{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding:20px;
         background: #202020;
         box-shadow: 1px 3px 6px #707070;
-        #{&}__logo{
+        &__logo{
             font-size: 50px;
             color: #f1f1f1;
         }
-        #{&}__submit{
+        &__submit{
             display: flex;
-            #{&}__input_wrap{
+            &__input_wrap{
                 height: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                #{&}__input_box{
+                &__input_box{
                     width: 120px;
                     padding: 4px 10px;
                     border:none;
@@ -30,10 +30,10 @@
                     box-sizing: border-box;
                 }
             }
-            #{&}__button_wrap{
+            &__button_wrap{
                 margin-left: 4px;
                 position: relative;
-                #{&}__button{
+                &__button{
                     box-sizing: border-box;
                     border: none;
                     border-radius: 6px;
